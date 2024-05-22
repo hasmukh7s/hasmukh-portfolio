@@ -1,0 +1,165 @@
+.banner{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    @media only screen and (max-width: 1024px) {
+        height: auto;
+    }
+    &::after{
+        position: absolute;
+        content: ' ';
+        background-color: #000;
+    }
+    video{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    .jquery-ripples{
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        canvas{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .container{
+        padding-top: 14%;
+        padding-bottom: 50px;
+        @media only screen and (max-width: 1024px) {
+            padding-top: 95px;
+        }
+        .banner-left{
+            h1{
+                font-size: 26px;
+                line-height: 26px;
+                font-family: $heading-font;
+                color: $white-color;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg{
+                    margin: 0 8px;
+                }
+            }
+         
+            h2{
+                font-size: 26px;
+                line-height: 26px;
+                font-family: $heading-font;
+                color: $white-color;
+                font-weight: 300;
+                margin-bottom: 40px;
+            }
+            .typewriter{
+
+            }
+            .btn-group{
+                margin-top: 20px;
+                .two{
+                    margin-left: 20px;
+                    background-color: $white-color;
+                    border-color: $white-color;
+                    color: $primary-color;
+                }
+                @media only screen and (max-width: 375px) {
+                    .primary-btn{
+                        width: 70%;
+                    }
+                    .two{
+                        margin-left: 0;
+                        margin-top: 18px;
+                    }
+                }
+            }
+        }
+        .banner-right{
+            img{
+                clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+                width: 420px;
+                height: 400px;
+                object-fit: cover;
+            }
+        }
+        @media only screen and (max-width: 1024px) {
+            flex-direction: column-reverse;
+            .w-50 {
+                width: 100%;
+                margin-top: 70px;
+            }
+            .banner-left{
+                margin-top: 40px;
+            }
+            .banner-right{
+                img{
+                    width: 320px;
+                    height: 300px;
+                }
+            }
+        }
+        @media only screen and (max-width: 320px) {
+            .banner-right{
+                img{
+                    width: 260px;
+                    height: 240px;
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------
+.typewriter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.typewriter span {
+    font-family: $heading-font;
+    color: var(--text-color);
+    text-transform: capitalize;
+    padding: 10px;
+    border-right: solid var(--text-color) 10px; 
+    animation: cursor 1s ease-in-out infinite;
+}
+
+@keyframes cursor {
+    from { border-color: var(--text-color); }
+    to { border-color: transparent; }
+}
+
+@media (max-width: 1199px) {
+    .typewriter { font-size: 38px; }
+}
+@media (max-width: 768px) {
+    .typewriter { font-size: 34px; }
+}
+@media (max-width: 576px) {
+    .typewriter { font-size: 24px; }
+}
+
+img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}

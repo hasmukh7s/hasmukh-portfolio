@@ -1,0 +1,46 @@
+.skill-right-slider{
+    margin-top: 30px;
+    &:last-child{
+        margin-top: 0;
+    }
+    .slick-list,.slick-track{
+        height: 250px;
+        @media only screen and (max-width: 1199px) {
+            height: 205px;   
+        }
+    }
+    .slick-slide{
+        margin: 10px;
+    }
+    .skill-one{
+        box-shadow: 1px 0px 3px #98c1d9;
+        transition: all 0.5s ease 0s;
+        background: $bg-white;
+        border-radius: 10px;
+        padding: 40px 30px;
+        .skill-icon{
+            margin-bottom: 20px;
+            img{
+                height: 100px;
+                @media only screen and (max-width: 1199px) {
+                    height: 60px;
+                }
+            }
+        }
+        h3{
+            font-family: $heading-font;
+            margin-bottom: 0;
+            font-weight: 400;
+            @media only screen and (max-width: 1199px) {
+                font-size: 18px;
+            }
+            @media only screen and (max-width: 320px) {
+                font-size: 15px;
+            }
+        }
+       
+        @media only screen and (max-width: 480px) {
+            padding: 30px;
+        }
+    }
+}

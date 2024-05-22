@@ -1,0 +1,68 @@
+.counter{
+    .counter-inner{
+        margin-top: 30px;
+        @media only screen and (max-width: 800px) {
+            flex-direction: column;
+        }
+        .count{
+            box-shadow: 5px 5px 20px rgba(152, 193, 217, 49%);
+            transition: all 0.5s ease 0s;
+            background: $bg-white;
+            border-radius: 10px;
+            padding:40px 30px;
+            min-width: 300px;
+            cursor: pointer;
+            h1{
+                font-family: $heading-font;
+                font-weight: 300;
+                margin-bottom: 6px;
+            }
+            p{
+                margin: 0;
+                color: $gray-color;
+                font-weight: 300;
+            }
+            svg{
+                font-size: 60px;
+                margin-bottom: 20px;
+                color: $skyblue-color;
+            }
+            &:hover{
+                color: $white-color;
+                background-color: $skyblue-color;
+                box-shadow:2px 2px 6px rgba(163 ,116 ,116, 32%);
+                h1,p,svg{
+                    color: $white-color;
+                }
+            }
+            
+            @media only screen and (max-width: 991px) {
+                padding: 30px 20px;
+                min-width: 240px;
+                h1{
+                    font-size: 26px;
+                }
+                svg{
+                    margin-bottom: 0;
+                }
+            }
+            @media only screen and (max-width: 800px) {
+                margin-bottom: 30px;
+                box-shadow: 0px 1px 5px #98c1d9;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                svg{
+                    font-size: 50px;
+                    margin-bottom: 8px;
+                }
+                h1{
+                    font-size: 26px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,214 @@
+header{
+    position: absolute;
+    width: 100%;
+    padding: 24px 0 !important;
+    z-index: 999;
+    .container{
+        border-radius: 10px;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        -webkit-backdrop-filter: blur(50px);
+        backdrop-filter: blur(50px);
+        background:#61dafb1f;
+        
+
+    
+        .header-logo{
+            width: 120px;
+            height: 80px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img{
+              height: 65px;
+              width: 65px;
+          }
+        }
+        .header-right{
+            .header-menu{
+                margin: 0;
+                li{
+                    margin-bottom: 0;
+                    margin-right: 20px;
+                    a{
+                      font-family: $heading-font;
+                      color: $white-color;
+                      &:hover{
+                        opacity: 0.5;
+                      }
+                    }
+                }
+                .mobile-show{
+                    display: none;
+                    a{
+                      color: $bg-white;
+                    }
+                    @media only screen and (max-width: 480px) {
+                        display: block;
+                    }
+                }
+                @media only screen and (max-width: 991px) {
+                    display: none;
+                    position: absolute;
+                    overflow: auto;
+                    height: 65vh;
+                    width: 100%;
+                    flex-wrap: unset;
+                    left: 0;
+                    top: 100%;
+                    border-radius: 0 0 10px 10px;
+                    -webkit-backdrop-filter: blur(50px);
+                    backdrop-filter: blur(50px);
+                    background:$bg-white;
+                    li{
+                        margin-right: 0;
+                        a{
+                            width: 100%;
+                            padding: 10px ;
+                            color: $black-color;
+                        }
+                        &:first-child{
+                            a{
+                                border-radius: 10px 10px 0 0;
+                            }
+                        }
+                        &:last-child{
+                            a{
+                                border-radius: 0 0 10px 10px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .download-btn {
+                .primary-btn{
+                  background-color: $primary-color;
+                  border-color: $primary-color;
+                  color: $white-color;
+                  &:hover{
+                    opacity: 0.8;
+                  }
+                }
+                @media only screen and (max-width: 991px) {
+                    margin-right: 20px;
+                }
+                @media only screen and (max-width: 480px) {
+                    display: none;
+                }
+            }
+        }
+        @media only screen and (max-width: 1450px) {
+            margin: 0 20px;
+        }
+    }
+}
+
+// added
+.menu-toggle {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    text-indent: -9999px;
+    display: none;
+    background-color: $primary-color;
+    border-radius: 5px;
+    @media only screen and (max-width: 991px) {
+        display: block;
+    }
+  }
+  .menu-toggle:hover .hamburger {
+    background-color:$bg-white;
+  }
+  .menu-toggle:hover .hamburger:after {
+    background-color:$bg-white;
+  }
+  .menu-toggle:hover .hamburger:before {
+    background-color:$bg-white;
+  }
+  // .nav-open .menu-toggle {
+  //   background-color: $body-font-color;
+  // }
+  .nav-open .menu-toggle:hover .hamburger:after {
+    background-color:$bg-white;
+  }
+  .nav-open .menu-toggle:hover .hamburger:before {
+    background-color:$bg-white;
+  }
+  .menu-toggle .hamburger {
+    height: 7%;
+    background-color:$bg-white;
+    width: 60%;
+    display: block;
+    border-radius: 5px;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .nav-open .menu-toggle .hamburger {
+    background: 0 0;
+  }
+  .menu-toggle .hamburger:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color:$bg-white;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+    bottom: 250%;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+  }
+  .nav-open .menu-toggle .hamburger:after {
+    opacity: 1;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+  .menu-toggle .hamburger:before {
+    content: "";
+    opacity: 1;
+    position: absolute;
+    height: 100%;
+    background-color:$bg-white;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+    top: 250%;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+  }
+  .nav-open .menu-toggle .hamburger:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0%;
+  }
+  .border .container{border-radius:10px 10px 0 0;}
+  
